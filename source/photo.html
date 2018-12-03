@@ -1,72 +1,133 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="utf-8">
-		<title>pink</title>
-	</head>
-	<body>
-		<header class="page-header">
-			<nav class="main-nav">
-				<ul class="main-nav__list">
-					<li class="main-nav__logo">
-						<a href="index.html">
-							<span class="visually-hidden">Логотип Pink</span>
-						</a>
-					</li>
-					<li class="main-nav__item">
-						<a href="index.html">
-							Главная
-						</a>
-					</li>
-					<li class="main-nav__item">
-						<a href="photo.html">
-							Фотографии
-						</a>
-					</li>
-					<li class="main-nav__item">
-						<a href="form.html">
-							Конкурс
-						</a>
-					</li>
-					<li class="main-nav__item">HTML Academy</li>
-				</ul>
-			</nav>
-		</header>
-		<main>
 
-		</main>
-		<footer>
-			<footer class="main-footer">
-				<section class="main-footer__logo">
-					<a href="#">
+<head>
+	<meta charset="utf-8">
+	<title>pink</title>
+</head>
+
+<body>
+	<header class="page-header">
+		<nav class="main-nav">
+			<ul class="main-nav__list">
+				<li class="main-nav__logo">
+					<a href="index.html">
 						<span class="visually-hidden">Логотип Pink</span>
 					</a>
-				</section>
-				<section class="main-footer__social social">
-					<ul class="social__list">
-						<li class="social__item">
-							<a href="#">
-							<span class="visually-hidden">twitter</span>
-							</a>
-						</li>
-						<li class="social__item">
-							<a href="#">
-							<span class="visually-hidden">facebook</span>
-							</a>
-						</li>
-						<li class="social__item">
-							<a href="#">
-							<span class="visually-hidden">you tube</span>
-							</a>
-						</li>
-					</ul>
-				</section>
-				<article class="main-footer__design">
-					<a href="#">
-						<h2>Разработано</h2>
-						<span class="visually-hidden">htmlacademy</span>
+				</li>
+				<li class="main-nav__item">
+					<a href="index.html">
+						Главная
 					</a>
-				</article>
-			</footer>
-	</body>
+				</li>
+				<li class="main-nav__item">
+					<a href="photo.html">
+						Фотографии
+					</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="form.html">
+						Конкурс
+					</a>
+				</li>
+				<li class="main-nav__item">HTML Academy</li>
+			</ul>
+		</nav>
+	</header>
+	<main class="page-main">
+		<section class="page-main__header">
+			<h1>Фотографии пользователей</h1>
+		</section>
+		<section class="photo">
+			<h2  class="visually-hidden">Фотографии</h2>
+			<div class="photo__panorama">
+				<p>Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+				<p>ПАНОРАМА ДНЯ</p>
+				<img src="panorama.jpg" alt="панорама">
+				<p>Анна (5 минут назад)</p>
+				<p>Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+				<p>Нравится: 215</p>
+			</div>
+			<ul class="photo__other">
+				<li class="photo__item">
+					<img src="photo1" alt="car">
+					<p>Левон (5 часов назад)</p>
+					<p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
+					<p>Нравится: 356</p>
+				</li>
+				<li class="photo__item">
+					<img src="photo2" alt="drum">
+					<p>Антон (12 часов назад)</p>
+					<p>Соседи будут рады!</p>
+					<p>Нравится: 666</p>
+				</li>
+				<li class="photo__item">
+					<img src="photo3" alt="window">
+					<p>Борис (20 часов назад)</p>
+					<p>Здесь могла быть ваша цитата о высоком и вечном.</p>
+					<p>Нравится: 215</p>
+				</li>
+				<li class="photo__item">
+					<img src="photo4" alt="melon">
+					<p>Сергей (25 часов назад)</p>
+					<p>Самая кубанская в мире!</p>
+					<p>Нравится: 4</p>
+				</li>
+				<li class="photo__item">
+					<img src="photo5" alt="mountain">
+					<p>Максим (40 часов назад)</p>
+					<p>Где снег-то?</p>
+					<p>Нравится: 150</p>
+				</li>
+				<li class="photo__item">
+					<img src="photo6" alt="air">
+					<p>Надежда (45 часов назад)</p>
+					<p>Всем GM и взаимные лайки!</p>
+					<p>Нравится: 2560</p>
+				</li>
+			</ul>
+		</section>
+		<article class="upload">
+				<h2 class="visually-hidden">Загрузка фотографий</h2>
+				<img src="photo0" alt="загрузи фото">
+				<input type="range" name="range" value="3">
+				<button type="button" name="Запостить">Запостить</button>
+				<button type="button" name="Отмена">Отмена</button>
+		</article>
+	</main>
+	<footer>
+		<footer class="main-footer">
+			<section class="main-footer__logo">
+				<a href="#">
+					<span class="visually-hidden">Логотип Pink</span>
+				</a>
+			</section>
+			<section class="main-footer__social social">
+				<ul class="social__list">
+					<li class="social__item">
+						<a href="#">
+							<span class="visually-hidden">twitter</span>
+						</a>
+					</li>
+					<li class="social__item">
+						<a href="#">
+							<span class="visually-hidden">facebook</span>
+						</a>
+					</li>
+					<li class="social__item">
+						<a href="#">
+							<span class="visually-hidden">you tube</span>
+						</a>
+					</li>
+				</ul>
+			</section>
+			<article class="main-footer__design">
+				<a href="#">
+					<h2>Разработано</h2>
+					<span class="visually-hidden">htmlacademy</span>
+				</a>
+			</article>
+		</footer>
+</body>
+
 </html>
