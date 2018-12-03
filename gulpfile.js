@@ -13,16 +13,16 @@ var server = require("browser-sync").create();
 // var posthtml = require("gulp-posthtml");
 // var include = require("posthtml-include");
 // var del = require("del");
-var pug = require("gulp-pug");
+// var pug = require("gulp-pug");
 
 // sass.compiler = require('node-sass');
 
-gulp.task("html", function(){
-	return gulp.src("source/pug/*.pug")
-	.pipe(plumber())
-	.pipe(pug())
-	.pipe(gulp.dest("source"));
-});
+// gulp.task("html", function(){
+// 	return gulp.src("source/pug/*.pug")
+// 	.pipe(plumber())
+// 	.pipe(pug())
+// 	.pipe(gulp.dest("source"));
+// });
 
 gulp.task('css', function () {
   return gulp.src("source/sass/style.scss")
@@ -39,11 +39,11 @@ gulp.task("server", function(){
 		server: "source/"
 	});
 	gulp.watch("source/**/*.{sass,scss}",gulp.series("css"))
-	gulp.watch("source/**/*.pug",gulp.series("html"));
-	// gulp.watch("source/*.html").on("change", server.reload);
+	// gulp.watch("source/**/*.pug",gulp.series("html"));
+	gulp.watch("source/*.html").on("change", server.reload);
 });
 
-gulp.task("start", gulp.series("html", "css", "server"));
+gulp.task("start", gulp.series("css", "server"));
 
 // "use strict";
 //
