@@ -45,5 +45,8 @@
   "engines": {
     "node": "v10.14.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "deep-extend": "^0.6.0",
+    "merge": "^1.2.1"
+  }
 }
