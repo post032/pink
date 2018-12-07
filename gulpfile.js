@@ -15,8 +15,6 @@ var server = require("browser-sync").create();
 // var del = require("del");
 // var pug = require("gulp-pug");
 
-// sass.compiler = require('node-sass');
-
 // gulp.task("html", function(){
 // 	return gulp.src("source/pug/*.pug")
 // 	.pipe(plumber())
@@ -24,26 +22,31 @@ var server = require("browser-sync").create();
 // 	.pipe(gulp.dest("source"));
 // });
 
-gulp.task('css', function () {
+
+
+gulp.task('css', function() {
   return gulp.src("source/sass/style.scss")
-		.pipe(plumber())
+    .pipe(plumber())
     .pipe(sass())
-		.pipe(postcss([
-			autoprefixer()
-		]))
-    .pipe(gulp.dest("source/css"));
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(gulp.dest("source/css"))
+    .pipe(server.stream());
 });
 
-gulp.task("server", function(){
-	server.init({
-		server: "source/"
-	});
-	gulp.watch("source/**/*.{sass,scss}",gulp.series("css"))
-	// gulp.watch("source/**/*.pug",gulp.series("html"));
-	gulp.watch("source/*.html").on("change", server.reload);
+gulp.task("server", function() {
+  server.init({
+    server: "source/"
+  });
+  gulp.watch("source/**/*.{sass,scss}", gulp.series("css"))
+  // gulp.watch("source/**/*.pug",gulp.series("html"));
+  gulp.watch("source/*.html").on("change", server.reload);
 });
 
 gulp.task("start", gulp.series("css", "server"));
+
+
 
 // "use strict";
 //
@@ -62,9 +65,9 @@ gulp.task("start", gulp.series("css", "server"));
 // var del = require("del");
 //
 // gulp.task("css", function() {
-//   return gulp.src("source/less/style.less")
+//   return gulp.src("source/sass/style.sass")
 //     .pipe(plumber())
-//     .pipe(less())
+//     .pipe(sass())
 //     .pipe(postcss([
 //       autoprefixer()
 //     ]))
@@ -83,7 +86,7 @@ gulp.task("start", gulp.series("css", "server"));
 //     ui: false
 //   });
 //
-//   gulp.watch("source/less/**/*.less", gulp.series("css"));
+//   gulp.watch("source/sass/**/*.sass", gulp.series("css"));
 //   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
 //   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 // });
