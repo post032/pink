@@ -2,7 +2,7 @@
   box-sizing: border-box;
   position: relative;
   margin: 0;
-  background-color: $menu-color;
+  // background-color: $menu-color;
 }
 
 .main-nav__list {
@@ -31,7 +31,7 @@
 .main-nav__toggle {
   position: absolute;
   top: -53px;
-  right: 17px;
+  right: 5%;
   z-index: 2;
   display: block;
   width: 30px;
@@ -107,7 +107,6 @@
 
 @media (min-width: $size-desktop) {
   .main-nav {
-    background-color: $menu-color-opasity;
     display: grid;
   }
 
@@ -115,8 +114,6 @@
   .main-nav__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding-left: 118px;
-    padding-right: 108px;
   }
 
   .main-nav__link {

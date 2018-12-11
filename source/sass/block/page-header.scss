@@ -2,11 +2,12 @@
   box-sizing: border-box;
   position: relative;
   margin: 0 auto;
+  background-color: $menu-color;
 }
 
 .page-header__logo {
   margin-top: 6px;
-  margin-left: 20px;
+  margin-left: 22%;
 }
 
 .page-header__logotype {
@@ -16,7 +17,7 @@
 }
 
 .page-header__item {
-  background-color: $menu-color;
+  // background-color: $menu-color;
   min-height: 69px;
   display: grid;
   align-items: center;
@@ -43,11 +44,12 @@
 @media (min-width: $size-desktop) {
   .page-header {
     display: grid;
-    grid-template-columns: 276px 1fr;
+    grid-template-columns: 23% 1fr 0%;
+    grid-gap: 10%;
+    background-color: $menu-color-opasity;
   }
 
   .page-header__item {
-    background-color: $menu-color-opasity;
     border: none;
     justify-content: flex-end;
   }
