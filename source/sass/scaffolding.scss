@@ -29,6 +29,7 @@ a {
 
 @media (min-width: $size-tablet) {
   .container {
+
     padding: 0;
     margin: 0 auto;
     width: 100%;
@@ -42,6 +43,7 @@ a {
     margin: 0 auto;
     width: 100%;
     position: relative;
+    max-width: 1400px;
   }
 }
 
